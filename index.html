@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           EasterEgg
+        </title>
+
+    
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+       <!-- Javascript Code For TIMECLOCK 
+............................................................................................-->
+       
+        <script>
+            function renderTime() {
+                var currentTime = new Date();
+                var diem = "AM";
+                var h = currentTime.getHours();
+                var m = currentTime.getMinutes();
+                var s = currentTime.getSeconds();
+                setTimeout('renderTime()',1000);
+                if (h == 0) {
+                    h = 12;
+                } else if (h > 12) { 
+                    h = h - 12;
+                    diem="PM";
+                }
+                if (h < 10) {
+                    h = "0" + h;
+                }
+                if (m < 10) {
+                    m = "0" + m;
+                }
+                if (s < 10) {
+                    s = "0" + s;
+                }
+                var myClock = document.getElementById('clockDisplay');
+                myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+                myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+            }
+            renderTime();
+        </script>
+        
+            <!-- Javascript Code For TIMECLOCK 
+............................................................................................-->
+
+              <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>     
+
+         <script>
+       var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+        </script>          
+
+</head>
+ 
+    <body>
+      <!-- SCROLLING LINE
+............................................................................................-->
+           
+            <marquee class="moving" behavior="scroll" direction="left" scrollamount="12">
+            Whoever said money can't buy happiness simply didn't know where to go shopping.&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160
+            The quickest way to know a woman is to go shopping with her. &#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160
+           I'm shopping around for something to do that no one will like. </marquee>
+           
+<!-- CLOCK HTML
+............................................................................................-->    
+       
+<div id="clockDisplay" class="clockStyle"></div>
+      
+<!-- NAVIGATION MENU 
+............................................................................................-->
+      
+       <div class="menu">
+        <h2><i class="fa fa-superpowers" aria-hidden="true"></i>EGG HOUSE
+        </h2>
+          <ul>
+            <li>
+                <a href="index.html">Log In</a>
+            </li>            
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li><a href="#">About</a>
+                <ul>
+                    <li><a href="#">Early Life</a></li>
+                    <li><a href="#">Personal Life</a></li>
+                    <li><a href="#">Microsoft</a></li>
+                    <li><a href="#">Images</a></li>
+                </ul>
+            </li>            
+            <li><a href="#">Home</a>
+                <ul>
+                    <li><a href="#">Early Life</a></li>
+                    <li><a href="#">Personal Life</a></li>
+                    <li><a href="#">Wealth</a></li>
+                    <li><a href="#">Images</a></li>
+                </ul>
+                <li><a href="#">Pages</a>
+                <ul>
+                    <li><a href="#">Early Life</a></li>
+                    <li><a href="#">Personal Life</a></li>
+                    <li><a href="#">Wealth</a></li>
+                    <li><a href="#">Images</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        <!-- BUBBLE ANIMATION 
+............................................................................................-->
+        <div class="anim1">
+       <i class="fa fa-phone-square fa-4x" aria-hidden="true"></i>
+       
+        </div>
+        <div class="anim2">
+ <i class="fa fa-dot-circle-o fa-4x" aria-hidden="true"></i>
+
+   </div>
+        <div class="anim3">
+<i class="fa fa-cart-plus fa-4x" aria-hidden="true"></i>
+   </div>
+
+        <!-- SLIDER 
+............................................................................................-->
+      
+<div id="container">
+             <img class="slides" src="img/eg01.jpg">
+             <img class="slides" src="img/eg02.jpg">
+             <img class="slides" src="img/eg03.jpg">
+             <img class="slides" src="img/eg04.jpg">
+             <img class="slides" src="img/eg05.jpg">
+             
+             <button class="btn" onclick="plusDivs(-1)" id="btn1">&#10094;</button>
+             <button class="btn" onclick="plusDivs(1)"  id="btn2">&#10095;</button>
+         </div>
+           
+<div class="ord">
+    
+     <h3>Place Your Order Now</h3>    
+</div>
+        
+      
+          
+  
+    </body>
+    
+    
+</html>
